@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/home_page.css' %}" rel="stylesheet" type="text/css">
+    <title>Personal trainer</title>
+</head>
+<body style="background-image: linear-gradient(rgba(23,56,172) 0%, rgba(45,253,220) 100%); background-repeat: no-repeat; height: 95vh;">
+    <div class="container">
+        <div class="blok1 background2">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input type="date" name="date">
+                <input type="time" name="time">
+                <input type="submit" value="Maak afspraak">
+            </form>
+        </div>
+        <a href="http://51.103.108.45/ingelogd">
+            <div class="blok2 background2">terug</div>
+        </a>
+    </div>
+</body>
+</html>

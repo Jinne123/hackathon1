@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/home_page.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Pas aanvragen</title>
+</head>
+<body style="background-image: linear-gradient(rgba(23,56,172) 0%, rgba(45,253,220) 100%); background-repeat: no-repeat; height: 95vh;">
+    <h1>Vul uw gegevens in voor de pas</h1>
+    <div class="container">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="text" name="voornaam" class="form-control" placeholder="voornaam">
+            <input type="text" name="achternaam" class="form-control" placeholder="achternaam">
+            <input type="email" name="email" class="form-control" placeholder="email">
+            <input type="text" name="adres" class="form-control" placeholder="adres">
+            <input type="submit" class="form-control" value="Vraag pas aan">
+        </form>
+        <a href="http://51.103.108.45">
+            <div class="blok1 background2">Terug</div>
+        </a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
